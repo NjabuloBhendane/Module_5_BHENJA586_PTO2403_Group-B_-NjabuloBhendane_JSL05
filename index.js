@@ -1,4 +1,4 @@
-// Array of song objects. Add at least 5 songs with title, artist, and genre properties.
+// Added 6 songs to the array
 const songs = [
     { title: "Hooked on a Feeling", artist: "Blue Swede", genre: "Pop" },
     { title: "Moonage Daydream", artist: "David Bowie", genre: "Rock" },
@@ -11,8 +11,16 @@ const songs = [
     { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
     { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
-    // Feel free to add even more songs
-];
+    { title: "Dancing in the Moonlight", artist: "King Harvest", genre: "Rock" },
+    { title: "September", artist: "Earth, Wind & Fire", genre: "R&B" },
+    { title: "Don't Stop Believin'", artist: "Journey", genre: "Rock" },
+    { title: "Le Freak", artist: "Chic", genre: "R&B" },
+    { title: "Billie Jean", artist: "Michael Jackson", genre: "Pop" },
+    { title: "Uptown Funk", artist: "Mark Ronson ft. Bruno Mars", genre: "Pop" }
+
+]
+
+;
 
 
 // Object containing each Guardian's preferred genre
