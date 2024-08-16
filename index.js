@@ -42,9 +42,33 @@ function generatePlaylist(guardians, songs) {
    for (const [guardian, genre] of Object.entries(guardians)) {
     playlists[guardian] = songs.filter(song => song.genre === genre);
 }
-console.log(playlists)
+displayPlaylists(playlists)
 }
 // Call generatePlaylist and display the playlists for each Guardian
 generatePlaylist(guardians, songs);
 
+// Function to display the playlists
+function displayPlaylists(playlists) {
+    const playlistsDiv = document.getElementById('playlists');
+   
+    // Iterate over the playlists object
+    for (const [guardian, playlist] of Object.entries(playlists)) {
+        // Create a section for each guardian's playlist
+        const section = document.createElement('section');
+        const title = document.createElement('h2');
+        title.textContent = `${guardian}'s Playlist`;
+        section.appendChild(title);
 
+        // I Created a list for the songs
+        const ul = document.createElement('ul');
+        playlist.forEach(song => {
+            const li = document.createElement('li');
+            li.textContent = `${song.title} by ${song.artist}`;
+            ul.appendChild(li);
+        });
+        section.appendChild(ul);
+
+        // Append the section to the playlists div
+        playlistsDiv.appendChild(section);
+    }
+}
